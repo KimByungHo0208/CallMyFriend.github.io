@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>추가</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <h1 class="mainTitle">추가</h1>
+    <hr>
+    <div id="input">
+        <div class="box">
+            <label for="name">이름 : </label>
+            <input type="text" id="name" name="name" required
+            minlength="4" maxlength="8" size="30">
+        </div>
+        <div class="box">
+            <label for="phone">전화번호 입력 </label>
+            <input type="tel" id="phone" name="phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                required>
+            <h6>예시: 010-1234-5678 </h6>
+        </div>
+        <div class="box">
+            <label for="name">관계 : </label>
+            <input type="text" id="relation" name="relation" required size="30">
+            <h6>예시 : 중학교친구, 직장동료 </h6>
+        </div>
+        <div id="btnLine">
+            <button type="button" class="btn" onclick="saveInfo()">저장</button>
+            <button type="button" class="btn" onclick="location.href='father.html'">목록</button>
+        </div>
+    </div>
+    <script>
+        var refer = JSON.parse(localStorage.getItem('present'));
+        function saveInfo(){
+            var name = document.getElementById('name').value;
+            var phone = document.getElementById('phone').value;
+            var relation = document.getElementById('relation').value;
+            var friend = {'refer':refer, 'name':name, 'phone':phone, 'relation':relation};
+    
+            // // Json Object를 저장하기
+            localStorage.setItem(name, JSON.stringify(friend));
+            history.back();
+        }
+    </script>
+</body>
+</html>

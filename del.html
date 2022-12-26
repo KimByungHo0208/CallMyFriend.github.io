@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>삭제</title>
+    <link rel="stylesheet" href="add.css">
+</head>
+<body>
+    <h1 class="mainTitle">삭제</h1>
+    <hr>
+    <div id="input">
+        <div class="box">
+            <label for="name">삭제할 이름 : </label>
+            <input type="text" id="name" name="name" required
+            minlength="4" maxlength="8" size="30">
+        </div>
+        <div id="btnLine">
+            <button type="button" class="btn" onclick="delList()">삭제</button>
+            <button type="button" class="btn" onclick="location.href='father.html'">목록</button>
+        </div>
+    </div>
+    <script>
+        function delList(){
+            var del = confirm('정말로 삭제하시겠습니까?');
+            if(del == true){
+                var name = document.getElementById('name').value;
+                localStorage.removeItem(name);
+                alert('삭제되었습니다.');
+                history.back();
+            }
+
+        }
+    </script>
+</body>
+</html>
