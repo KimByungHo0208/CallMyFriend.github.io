@@ -1,0 +1,37 @@
+.mainTitle{
+    text-align: center;
+    margin: 50px;
+}
+#input{
+    padding-top:50px;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width:200px;
+    height:100px;
+    margin:20px;
+    font-size: 20px;
+
+    justify-content: center;
+    align-items: center;
+}
+input {
+    width:150px;
+    height:30px;
+    font-size:20px;
+}
+#btnLine{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    width:100px;
+    height:80px;
+    font-size: 20px;
+    margin:30px;
+}

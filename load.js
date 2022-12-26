@@ -26,19 +26,5 @@ for(let key in localStorage) {
         
         var container = document.getElementById('btns');
         container.appendChild(button);
-        // document.addEventListener('DOMContentLoaded', function() {
-        //     var button = document.createElement('button');
-        //     button.type = 'button';
-        //     button.innerText = Pname+'\n'+phone+'\n'+relation;
-        //     button.value = phone;
-        //     button.className = 'btn';
-            
-        //     button.onclick = function() {
-        //         location.href="tel:"+phone;
-        //     };
-            
-        //     var container = document.getElementById('btns');
-        //     container.appendChild(button);
-        // });
     }
   }
