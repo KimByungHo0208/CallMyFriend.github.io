@@ -30,7 +30,7 @@
         </div>
         <div id="btnLine">
             <button type="button" class="btn" onclick="saveInfo()">저장</button>
-            <button type="button" class="btn" onclick="history.back()">목록</button>
+            <button type="button" class="btn" onclick="historyBack()">목록</button>
         </div>
     </div>
     <script>
@@ -44,6 +44,9 @@
             // // Json Object를 저장하기
             localStorage.setItem(name, JSON.stringify(friend));
             history.back();
+        }
+        function historyBack(){
+            return location.href=JSON.parse(localStorage.getItem('present'))+'.html';
         }
     </script>
 </body>

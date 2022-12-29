@@ -18,7 +18,7 @@
         </div>
         <div id="btnLine">
             <button type="button" class="btn" onclick="delList()">삭제</button>
-            <button type="button" class="btn" onclick="history.back()">목록</button>
+            <button type="button" class="btn" onclick="historyBack()">목록</button>
         </div>
     </div>
     <script>
@@ -30,7 +30,9 @@
                 alert('삭제되었습니다.');
                 history.back();
             }
-
+        }
+        function historyBack(){
+            return location.href=JSON.parse(localStorage.getItem('present'))+'.html';
         }
     </script>
 </body>

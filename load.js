@@ -19,12 +19,12 @@ for(let key in localStorage) {
         button.innerText = Pname+'\n'+phone+'\n'+relation;
         button.value = phone;
         button.className = 'btn';
+        button.addEventListener('click',function(){
+            location.href=`tel:${phone}`;
+        });
         
-        button.onclick = function() {
-            location.href="tel:"+phone;
-        };
-        
+        console.log(phone);
         var container = document.getElementById('btns');
         container.appendChild(button);
     }
-  }
+}
